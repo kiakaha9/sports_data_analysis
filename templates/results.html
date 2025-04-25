@@ -2,13 +2,37 @@
 <html lang="lv">
 <head>
     <meta charset="UTF-8">
-    <title>Rezultātu Vizualizācija</title>
+    <title>Analīzes rezultāti</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <div class="container">
-        <h1>Komandu Vidējie Punkti</h1>
-        <img src="{{ url_for('static', filename='uploads/plot.png') }}" class="img">
+        <h1>Sporta rezultātu analīze</h1>
+
+        <form method="GET" action="{{ url_for('results') }}">
+            <label for="team">Atlasīt komandu:</label>
+            <select name="team" id="team">
+                <option value="">Visas komandas</option>
+                {% for t in teams %}
+                <option value="{{ t.team }}">{{ t.team }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" class="btn">Atlasīt</button>
+        </form>
+
+        {% if team %}
+        <h2>Atlasīta komanda: {{ team }}</h2>
+        {% endif %}
+
+        <h2>Vidējie punkti pēc komandām</h2>
+        <img src="{{ url_for('static', filename='uploads/bar_chart.png') }}" class="img">
+
+        <h2>Punktu sadalījuma histogramma</h2>
+        <img src="{{ url_for('static', filename='uploads/histogram.png') }}" class="img">
+
+        <h2>Punktu dinamika laikā</h2>
+        <img src="{{ url_for('static', filename='uploads/line_chart.png') }}" class="img">
+
         <br><br>
         <a href="{{ url_for('home') }}" class="btn btn-secondary">Atpakaļ uz sākumu</a>
     </div>
