@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <title>Sporta Datu Analīze</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Sveicināti Sporta Datu Analīzē!</h1>
+        <p>Augšupielādējiet CSV failu ar spēļu rezultātiem, lai apskatītu analīzi.</p>
+        <a href="{{ url_for('upload_file') }}" class="btn">Augšupielādēt CSV</a>
+    </div>
+</body>
+</html>

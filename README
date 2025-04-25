@@ -1,0 +1,31 @@
+# Sporta Datu Analīzes Web Lietotne
+
+Šī ir Flask balstīta Web lietotne, kas ļauj lietotājiem augšupielādēt sporta spēļu rezultātu CSV failus un analizēt tos caur dažādām vizualizācijām.
+
+## Funkcijas:
+- CSV failu augšupielāde.
+- Automātiska grafiku ģenerēšana.
+- Vidējo punktu analīze pēc komandām.
+- Glīts un vienkāršs lietotāja interfeiss.
+
+## Kā palaist:
+1. Klonē repozitoriju:
+    ```
+    git clone https://github.com/tavs-lietotajvards/sports_data_analysis.git
+    ```
+2. Ievadi:
+    ```
+    pip install -r requirements.txt
+    ```
+3. Palaiž aplikāciju:
+    ```
+    python app.py
+    ```
+
+4. Atver pārlūkā: `http://127.0.0.1:5000/`
+
+## Prasības:
+- Flask
+- pandas
+- matplotlib
+- Werkzeug

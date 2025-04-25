@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <title>Rezultātu Vizualizācija</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Komandu Vidējie Punkti</h1>
+        <img src="{{ url_for('static', filename='uploads/plot.png') }}" class="img">
+        <br><br>
+        <a href="{{ url_for('home') }}" class="btn btn-secondary">Atpakaļ uz sākumu</a>
+    </div>
+</body>
+</html>
